@@ -3,7 +3,6 @@ var app = {  // 定义目录
     buildPath:'build/',
     distPath:'dist/'
 };
-
 /*1.引入gulp与gulp插件   使用时，要去下载这些插件*/
 var gulp = require('gulp');
 var less = require('gulp-less');

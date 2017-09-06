@@ -1,13 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app='app' ng-controller='AppController'>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0">
 
-    <title>日日一刻</title>
+    <title ng-bind='titleAPP'>日日一刻111</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
+<navs is-back="true"></navs>
+
+<tab></tab>
+
+<div class='conter' >
+    <div class="home" ui-view="home"  ng-show="id == 0" ></div>
+    <div class="author" ui-view="author" ng-show="id == 1" ></div>
+    <div class="content" ui-view="content" ng-show="id == 2"></div>
+    <div class="my" ui-view="my" ng-show="id == 3"></div>
+</div>
+
+<script>
+    var fontSize = window.screen.width / 10 + 'px';
+    document.getElementsByTagName('html')[0].style.fontSize = fontSize;
+</script>
+
+<script src='lib/angular/angular.js'></script>
+<script src='lib/angular-ui-router/release/angular-ui-router.js'></script>
+<script src='js/index.js'></script>
 </body>
 </html>
